@@ -1,0 +1,114 @@
+/* InvestmentDivs.module.css */
+
+.investment_container {
+  /* text-align: center; */
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+.investment_header{
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.investment_heading {
+  font-size: 40px;
+  color: #545454;
+  padding: 0px 10px;
+}
+
+.investment_paragraph {
+  color: #707070;
+  font-size: 16px;
+  padding: 0px 10px;
+}
+
+.investment_divs {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  box-sizing: border-box;
+  max-width: 1200px; 
+  margin: 0px auto;
+  padding: 0px 30px;
+  overflow-x: auto; 
+
+}
+
+.for_buyers,
+.for_investors,
+.for_builders {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px; 
+  box-sizing: border-box; 
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+ 
+.for_builders {
+  background-color: #699f7fc7;
+
+}
+
+.for_builders:hover {
+  background-color: #699F7F;
+
+}
+
+.for_investors {
+  background-color: #d49898c5;
+}
+
+.for_investors:hover {
+  background-color: #d49898;
+}
+
+.for_buyers {
+  background-color: #7781bccc;
+}
+
+.for_buyers:hover{
+  background-color: #7781bc;
+}
+
+.img_single {
+  width: 100px; /* Adjust the width of the image as needed */
+  height: 100px; /* Adjust the height of the image as needed */
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.investment_divs h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.investment_divs p {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .investment_divs {
+    max-width: 400px;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: stretch;
+  }
+
+  .investment_heading {
+    font-size: 20px;
+    color: #545454;
+    padding: 0px 10px;
+  }
+  
+  .investment_paragraph {
+    color: #707070;
+    font-size: 12px;
+    padding: 0px 10px;
+  }
+}

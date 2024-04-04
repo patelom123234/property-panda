@@ -1,0 +1,142 @@
+.first_footer_full {
+  background-color: #2E48DE;
+}
+
+.first_container {
+  box-sizing: border-box;
+  width: 85%;
+  padding: 20px 0px ;
+  margin: auto;
+  margin-top: 80px;
+  max-width: 1280px;
+  background-color: #2E48DE; 
+  /* font-family: sans-serif; */
+  color: #FFFFFF;
+}
+
+.all_divs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 20px; */
+  /* width: 100%; */
+  /* border: 1px solid green; */
+  border-radius: 15px;
+  /* margin: auto; */
+}
+
+.p_panda,
+.p_company,
+.p_contact{
+  width: 30%;
+}
+
+.p_panda,
+.p_company{
+  padding-right: 15px;
+}
+
+/* .newletter_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  width: 80%;
+  box-shadow: 1px 3px 1px #0000004c;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 80px;
+  background-color: #FFFFFF;
+} */
+
+.first_container p {
+  margin-top: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  color: #ffffffcf;
+}
+
+.first_container h2{
+  font-size: 20px;
+}
+
+.second_container {
+  color: #545454;
+  width: 85%;
+  max-width: 1280px;
+  margin: auto;
+  /* border: 1px solid green; */
+  padding: 5px 2px;
+  box-sizing: border-box;
+}
+
+.second_container p {
+  font-size: 10px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.611);
+}
+
+.third_section{
+  background-color: #2E48DE;
+
+}
+
+.third_container {
+  font-size: 16px;
+  width: 85%;
+  max-width: 1280px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  margin: auto;
+  color: #ffffffcf;
+}
+
+.p_terms_conditions {
+  display: flex;
+  gap: 15px;
+}
+
+
+@media screen and (max-width: 790px) {
+  
+  .first_container p {
+    margin-top: 5px;
+    font-size: 10px;
+    color: #ffffffcf;
+  }
+  
+  .first_container h2{
+    font-size: 18px;
+  }
+
+  .third_container{
+    font-size: 1.6vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  /* CSS rules for screens that are 600px or smaller */
+
+  .second_container p {
+    font-size: 5px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.611);
+  }
+
+  .first_container h2{
+    font-size: 16px;
+  }
+
+  .first_container p {
+    margin-top: 5px;
+    font-size: 8px;
+    color: #ffffffcf;
+  }
+}
+

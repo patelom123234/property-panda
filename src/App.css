@@ -1,0 +1,31 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+body {
+  font-family: 'Outfit', sans-serif; /* Use the correct font-family name */
+}
+
+.app-container {
+  /* max-width: 1440px; */
+  margin: 0 auto;
+}
+
+/* Round bottom-left corner of the last row */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+/* Round bottom-right corner of the last row */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 12px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 12px;
+}
+
+

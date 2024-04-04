@@ -1,0 +1,79 @@
+
+
+.builders {
+    margin: auto;
+    max-width: 1440px;
+    margin-top: 80px;
+}
+
+.builderscontainer {
+    display: flex;
+    padding-left: 40px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    gap: 20px;
+    scrollbar-width: none; /* Firefox 64 */
+}
+
+.builderdiv{
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 233px;
+    /* background-color: #2E48DE; */
+    border-radius: 12px;
+    color: #FFFFFF;
+  
+}
+
+.bimage {
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+}
+
+.np_container {
+     font-size: 25.97px;
+     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .builderscontainer {
+        display: flex;
+        padding: 0px 40px;
+        box-sizing: border-box;
+        overflow-x: auto;
+        gap: 20px;
+    }
+    
+    .builderdiv{
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 154px;
+        /* height: 119px; */
+        /* background-color: #2E48DE; */
+        border-radius: 12px;
+        color: #FFFFFF;
+    }
+    
+    .bimage {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    
+    .np_container {
+         font-size: 12.26px;
+    }
+    /* CSS rules for screens that are 600px or smaller */
+  }
+  

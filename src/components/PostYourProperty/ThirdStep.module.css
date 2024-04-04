@@ -1,0 +1,72 @@
+/* ThirdStep.module.css */
+
+.container {
+  text-align: center;
+  margin: 20px;
+  border: 2px dashed #6d7bfd;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.inputFileContainer {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.inputFile {
+  margin-bottom: 10px;
+  opacity: 0;
+  font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.browseButton {
+  background-color: #6d7bfd;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.submitContainer {
+  width: 100%;
+  text-align: center;
+}
+.submitButton {
+  background-color: #6d7bfd;
+  color: #fff;
+  width: 200px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.imageContainer {
+  margin-top: 10px;
+}
+
+.selectedImage {
+  max-width: 300px;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.note {
+  color: #555;
+  margin-top: 20px;
+}
+
+.email_address {
+  color: #6d7bfd;
+}

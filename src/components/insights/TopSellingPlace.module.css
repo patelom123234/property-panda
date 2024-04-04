@@ -1,0 +1,236 @@
+/* TopSellingPlace.module.css */
+
+.topSellingPlace {
+  margin: auto;
+  /* max-width: 1440px; */
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+.header {
+  max-width: 1440px;
+  margin: auto;
+  /* border: 1px solid green; */
+  margin-bottom: 40px;
+  padding-left: 80px;
+}
+
+.header h2{
+  font-size: 40px;
+  color: #545454;
+}
+
+.header p{
+  color: #707070;
+  font-size: 16px;
+}
+
+.localities{
+  display: flex;
+  width: 88%;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 16px;
+  color: #545454;
+}
+
+.dataTable {
+  width: 80%;
+  border-collapse: collapse;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin: auto;
+}
+
+.dataTable th, .dataTable td {
+  border: none;
+  padding: 8px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.dataTable th {
+  background-color: #2E48DE;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.dataTable tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table_holder_full{
+  background-image: url('../../public/rectangle.jpg');
+}
+
+.table_holder {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  /* background-image: url('../../public/rectangle.jpg'); */
+  padding: 40px 0px;
+  box-sizing: border-box;
+}
+
+.locality_link {
+  text-decoration: none;
+  color: #2E48DE;
+}
+
+.locality_link:hover {
+  color: #2e48ded1;
+}
+
+.active_locality {
+  font-weight: bold;
+}
+
+.active_locality_link {
+  color: #ff0080;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 820px) {
+  .localities {
+    font-size: 14px;
+  }
+  .dataTable th {
+   font-size: medium;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .localities {
+    font-size: 12px;
+  }
+  .dataTable th{
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .localities {
+    font-size: 8px;
+  }
+  .dataTable th {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .localities {
+    font-size: 6px;
+  }
+  .dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin: auto;
+  }
+
+  .header {
+    max-width: 1440px;
+    margin: auto;
+    /* border: 1px solid green; */
+    margin-bottom: 40px;
+    /* padding-left: 80px; */
+  }
+  .table_holder {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    /* background-image: url('../../public/rectangle.jpg'); */
+    padding: 20px 5px;
+    box-sizing: border-box;
+  }
+
+  .dataTable th, .dataTable td {
+  font-size: 10px;
+  }
+  
+}
+
+
+
+/* YourStyles.module.css */
+
+/* .toggleButton {
+  display: flex;
+  margin: 10px;
+} */
+
+.toggleButtons {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+
+  justify-content: space-between;
+ } 
+
+/* .first_toggle {
+  width: 164px;
+}
+.second_toggle {
+  width: 180px;
+} */
+
+.toggleButton button {
+  padding: 10px 20px;
+  flex: 1;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.toggleButton button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.toggleButton button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.toggleButton button:hover {
+  background-color: #f0f0f0;
+}
+
+.toggleButton button.active {
+  background-color: #2E48DE;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header h2{
+    font-size: 20px;
+    color: #545454;
+  }
+  
+  .header p{
+    color: #707070;
+    font-size: 12px;
+  }
+  .header {
+    max-width: 1440px;
+    margin: auto;
+    /* border: 1px solid green; */
+    margin-bottom: 40px;
+    padding-left: 40px;
+  }
+  .toggleButton button {
+    padding: 5px 10px;
+    font-size: 12px;
+    flex: 1;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

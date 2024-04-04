@@ -1,0 +1,114 @@
+/* Cities.module.css */
+
+.city_container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 80px;
+  margin: auto;
+  margin-top: 80px;
+  max-width: 1440px;
+}
+
+body {
+  scrollbar-width: none;
+}
+
+.cities_heading {
+  font-size: 40px;
+  color: #545454;
+}
+
+.cities_paragraph {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #707070;
+}
+
+.all_cities {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox 64 */
+  gap: 95px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar
+{
+    overflow: auto;
+    -ms-overflow-style: none; /* IE 11 */
+}
+
+.city_div {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.city_img {
+  width: 130px; 
+  height: 130px; 
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.city_name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #545454  ;
+}
+
+@media only screen and (max-width: 768px) {
+  .city_img {
+    width: 69px; 
+    height: 69px; 
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .cities_heading {
+    font-size: 20px;
+    color: #545454;
+  }
+  
+  .cities_paragraph {
+    font-size: 12px;
+    margin-bottom: 40px;
+    color: #707070;
+  }
+  .city_container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 40px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 1440px;
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+ 
+  .city_img {
+    width: 69px; 
+    height: 69px; 
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .cities_heading {
+    font-size: 20px;
+    color: #545454;
+  }
+  
+  .cities_paragraph {
+    font-size: 12px;
+    margin-bottom: 40px;
+    color: #707070;
+  }
+}

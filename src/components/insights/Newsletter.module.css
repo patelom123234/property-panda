@@ -1,0 +1,128 @@
+/* .newletter_container_full {
+   border: 1px solid slateblue;
+} */
+/* .newletter_container_full {
+  border: 1px solid green;
+} */
+.newletter_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  max-width: 93%;
+  width: 85%;
+  gap: 10px;
+  max-width: 1280px;
+  max-height: 334px;
+  /* border: 1px solid green; */
+  box-shadow: 1px 3px 1px #0000004c;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 80px;
+  background-color: #FFFFFF;
+}
+
+.newletter_container > div {
+  flex: 1;
+}
+
+.newletter_container > div:last-child {
+  margin-right: 0;
+}
+
+.newletter_container h2 {
+  font-size: 40px;
+  color: #545454;
+  margin-bottom: 10px;
+}
+
+.newletter_container h3 {
+  font-size: 32px;
+  color: #545454;
+  margin-bottom: 10px;
+}
+
+.newletter_container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.newletter_container input {
+  max-width: 414px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.newletter_container button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribe_container {
+  display: flex;
+  background-color: #e7e7e7;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-radius: 10px;
+  max-width: 414px;
+  box-sizing: border-box;
+}
+
+.subscribe_container input {
+  margin-top: 10px;
+  width: 100%; /* Use full width for small screens */
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.subscribe_container button {
+  background-color: #2e48de;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .newletter_container {
+    width: 85%;
+    height: auto; /* Allow the height to adjust based on content */
+    flex-direction: column;
+    align-items: baseline;
+    padding: 20px;
+  }
+
+  .newletter_container h2 {
+    font-size: 20px;
+    /* margin-bottom: 5px; */
+  }
+
+  .newletter_container h3 {
+    font-size: 16px;
+    /* margin-bottom: 5px; */
+  }
+
+  .newletter_container p {
+    font-size: 8px;
+    /* margin-bottom: 20px; */
+  }
+
+  
+.subscribe_container button {
+  padding: 7px 12px;
+}
+
+.subscribe_container input {
+  padding: 5px;
+}
+}

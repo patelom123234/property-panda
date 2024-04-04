@@ -1,0 +1,43 @@
+
+
+.search_container {
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin-top: 80px;
+  padding: 0px 40px;
+}
+
+.search_container h2 {
+  font-size: 40px;
+  color: #545454;
+}
+
+.p_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  box-sizing: border-box;
+  /* margin: 0 10px; */
+  margin-top: 20px;
+}
+
+.p_container h3 {
+  color: rgba(0, 0, 0, 0.691);
+  margin-bottom: 5px;
+}
+
+.p_container p {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.691);
+  line-height: 1.2;
+  /* color: #b4b4b4; */
+}
+
+@media screen and (max-width: 768px) {
+  .search_container {
+     display: none;
+  }
+  /* CSS rules for screens that are 600px or smaller */
+}

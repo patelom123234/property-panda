@@ -1,0 +1,135 @@
+/* Demistry.module.css */
+.demistry_div {
+  margin: auto;
+  margin-top: 80px;
+  width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+  /* font-family: 'Times New Roman', Times, serif; */
+}
+
+.demistry_container {
+  margin: auto;
+  position: relative;
+  /* border: 1px solid green; */
+  width: fit-content;
+}
+
+.demistry_heading {
+  font-size: 100px;
+  margin-left: 80px;
+  margin-right: 15px;
+  color: #545454;
+  display: inline-block;
+}
+
+.demistry_main_heading {
+  font-size: 40px;
+  color: #545454;
+}
+
+.demistry_main_paragraph {
+  font-size: 16px;
+  color: #707070;
+}
+
+.big_logo {
+  /* position: relative; */
+  max-width: 356px;
+  max-height: 413px;
+  /* background-color: rgb(209, 8, 8); */
+  /* margin-left: 150px; */
+  padding: 0;
+  /* margin-left: 50px; */
+  border: none;
+  overflow: hidden;
+}
+
+.R_logo {
+  /* border: 1px solid blue; */
+  width: 863px;
+  height: 708px;
+  /* margin-bottom: 2vw; */
+} 
+
+.sub_div {
+  margin-top: -60px;
+  width: 820px;
+  background-color: #2E48DE;
+  height: 150px;
+  /* border-radius: 15px; */
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+
+@media only screen and (max-width: 1440px) {
+
+.big_logo {
+  /* position: relative; */
+  max-width: 20vw;
+  /* background-color: rgb(209, 8, 8); */
+  /* margin-left: 150px; */
+
+  padding: 0;
+  border: none;
+  height: 25vw;
+  overflow: hidden;
+}
+
+.R_logo {
+  /* border: 1px solid blue; */
+  width: 52vw;
+  margin-bottom: 2vw;
+  height: 50vw;
+  /* background-color: green; */
+} 
+
+.sub_div {
+  margin-top: -6vw;
+  width: 50%;
+  background-color: #2E48DE;
+  height: 12vw;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+  .demistry_main_heading {
+    font-size: 20px;
+    color: #545454;
+  }
+  
+  .demistry_main_paragraph {
+    font-size: 12px;
+    color: #707070;
+  }
+
+  .demistry_heading {
+    font-size: 100px;
+    margin-left: 40px;
+    margin-right: 15px;
+    color: #545454;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .demistry_main_heading {
+    font-size: 20px;
+    color: #545454;
+  }
+  
+  .demistry_main_paragraph {
+    font-size: 12px;
+    color: #707070;
+  }
+
+  /* .demistry_heading {
+    font-size: 100px;
+    margin-left: 40px;
+    margin-right: 15px;
+    color: #545454;
+  } */
+  
+}
