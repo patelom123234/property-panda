@@ -1,61 +1,4 @@
-// import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import { lazy, Suspense } from 'react';
-// import PageNotFound from './pages/PageNotFound/PageNotFound';
-// import LoadingSpinner from './pages/LoadingSpinner/LoadingSpinner';
-// import ScrollToTop from "./components/common/ScrollTop";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
-// import "../public/scss/main.scss";
-// import { useEffect } from "react";
-// import Home_V2 from "./pages/homes/home-v2";
-// import GridFull4Col from "./pages/listings/(grid-view)/grid-full-4-col";
-// import SingleV7 from "./pages/property/(single-style)/single-v7";
-// import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
-// import Mainpage from './pages';
-// import InfoAdvertise from './pages/InfoAdvertise/InfoAdvertise';
-
-// const Insight_index = lazy(() => import('./pages/InsightIndex/Insight_index'));
-// const Insight_details = lazy(() => import('./pages/InsightDetails/Insight_details'));
-
-// if (typeof window !== "undefined") {
-//   import("bootstrap");
-// }
-
-// function App() {
-//   useEffect(() => {
-//     Aos.init({
-//       duration: 1200,
-//       once: true,
-//     });
-//   }, []);
-
-//   return (
-//     <BrowserRouter>
-//       <div className="app-container wrapper ovh">
-//         <ScrollTopBehaviour />
-//         <Suspense fallback={<LoadingSpinner />}>
-//           <Routes>
-//             <Route path="/" element={<Mainpage />} />
-//             <Route path="/" element={<Home_V2 />} />
-//             <Route path="/grid-full-4-col" element={<GridFull4Col />} />
-//             <Route path="/single-v7/:id" element={<SingleV7 />} />
-//             <Route path="/insight" element={<Insight_index />} />
-//             <Route path="/details" element={<Insight_details />} />
-
-//             {/* Render the InfoAdvertise component with the desired class */}
-//             <Route path="/info-advertise/*" element={<div className="app_container_info_advertise_unique_name"><InfoAdvertise /></div>} />
-
-//             <Route path="*" element={<PageNotFound />} />
-//           </Routes>
-//         </Suspense>
-//         <ScrollToTop />
-//       </div>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
-
+import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
@@ -118,12 +61,6 @@ function App() {
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
-            {/* <Route path="/about-us" element={<AboutUs />} /> */}
-            {/* <Route path="/contact-us" element={<ContactUs />} />
-            
-            <Route path="/feedback" element={<Feedback />} /> */}
-
             <Route
               path="/info-advertise/*"
               element={
@@ -141,4 +78,33 @@ function App() {
   );
 }
 
-export default App;
+// ErrorBoundary component to handle errors globally
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // Log the error to an error reporting service
+    console.error("An error occurred:", error, errorInfo);
+    this.setState({ hasError: true });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // Render fallback UI when there's an error
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+
+export default function AppWithErrorBoundary() {
+  return (
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  );
+}

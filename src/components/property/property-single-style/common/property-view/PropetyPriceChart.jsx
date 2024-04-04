@@ -82,32 +82,100 @@ const PropertyPriceChart = () => {
   };
 
   return (
-    // <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', gap:'20px' }}>
-    //   <div style={{ flex: '1', width:'100%' }}>
-    //     <table style={{ width: '100%', borderCollapse: 'collapse', margin: 'auto' }}>
-    //       <thead>
-    //         <tr>
-    //           <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Project Name</th>
-    //           <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Rate per sq</th>
-    //           <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Percentage</th>
-    //         </tr>
-    //       </thead>
-    //       <tbody>
-    //         {data.map((row, index) => (
-    //           <tr key={index}>
-    //             <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.projectName}</td>
-    //             <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.ratePerSq}</td>
-    //             <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.percentage}%</td>
-    //           </tr>
-    //         ))}
-    //       </tbody>
-    //     </table>
-    //   </div>
-    //   <div style={{ flex: '1', maxWidth: '100%', width: '100%', height: '400px', margin: 'auto' }}>
-    //     <CanvasJSChart options={options} />
-    //   </div>
-    // </div>
-    <></>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "flex-start",
+        justifyContent: "space-between",
+        gap: "20px",
+      }}
+    >
+      <div style={{ flex: "1", width: "100%" }}>
+        <table
+          style={{ width: "100%", borderCollapse: "collapse", margin: "auto" }}
+        >
+          <thead>
+            <tr>
+              <th
+                style={{
+                  padding: "8px",
+                  textAlign: "center",
+                  backgroundColor: "blue",
+                  color: "white",
+                }}
+              >
+                Project Name
+              </th>
+              <th
+                style={{
+                  padding: "8px",
+                  textAlign: "center",
+                  backgroundColor: "blue",
+                  color: "white",
+                }}
+              >
+                Rate per sq
+              </th>
+              <th
+                style={{
+                  padding: "8px",
+                  textAlign: "center",
+                  backgroundColor: "blue",
+                  color: "white",
+                }}
+              >
+                Percentage
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((row, index) => (
+              <tr key={index}>
+                <td
+                  style={{
+                    padding: "8px",
+                    textAlign: "center",
+                    borderBottom: "1px solid #ddd",
+                  }}
+                >
+                  {row.projectName}
+                </td>
+                <td
+                  style={{
+                    padding: "8px",
+                    textAlign: "center",
+                    borderBottom: "1px solid #ddd",
+                  }}
+                >
+                  {row.ratePerSq}
+                </td>
+                <td
+                  style={{
+                    padding: "8px",
+                    textAlign: "center",
+                    borderBottom: "1px solid #ddd",
+                  }}
+                >
+                  {row.percentage}%
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div
+        style={{
+          flex: "1",
+          maxWidth: "100%",
+          width: "100%",
+          height: "400px",
+          margin: "auto",
+        }}
+      >
+        <CanvasJSChart options={options} />
+      </div>
+    </div>
   );
 };
 
