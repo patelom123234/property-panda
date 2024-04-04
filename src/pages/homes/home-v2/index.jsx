@@ -7,7 +7,6 @@ import Explore from "@/components/home/home-v2/Explore";
 import FeaturedListings from "@/components/home/home-v2/FeatuerdListings";
 import Header from "@/components/home/home-v2/Header";
 import About from "@/components/home/home-v2/about";
-import Testimonial_about from "@/components/home/home-v2/testimonial";
 import Hero from "@/components/home/home-v2/hero";
 // import React from "react";
 
