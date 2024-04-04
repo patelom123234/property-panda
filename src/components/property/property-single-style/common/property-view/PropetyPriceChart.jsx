@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import CanvasJSReact from '@canvasjs/react-charts';
+import React, { useState, useEffect } from "react";
+import CanvasJSReact from "@canvasjs/react-charts";
 
 const CanvasJS = CanvasJSReact.CanvasJS;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const data = [
-  { projectName: 'Project A', rate: 100, ratePerSq: 20, percentage: 75 },
-  { projectName: 'Project B', rate: 150, ratePerSq: 25, percentage: 80 },
-  { projectName: 'Project C', rate: 120, ratePerSq: 18, percentage: 90 },
-  { projectName: 'Project D', rate: 120, ratePerSq: 18, percentage: 90 },
-  { projectName: 'Project E', rate: 120, ratePerSq: 18, percentage: 90 },
-  { projectName: 'Project F', rate: 120, ratePerSq: 18, percentage: 90 },
-  { projectName: 'Project G', rate: 120, ratePerSq: 18, percentage: 90 },
-  { projectName: 'Project H', rate: 120, ratePerSq: 18, percentage: 90 },
+  { projectName: "Project A", rate: 100, ratePerSq: 20, percentage: 75 },
+  { projectName: "Project B", rate: 150, ratePerSq: 25, percentage: 80 },
+  { projectName: "Project C", rate: 120, ratePerSq: 18, percentage: 90 },
+  { projectName: "Project D", rate: 120, ratePerSq: 18, percentage: 90 },
+  { projectName: "Project E", rate: 120, ratePerSq: 18, percentage: 90 },
+  { projectName: "Project F", rate: 120, ratePerSq: 18, percentage: 90 },
+  { projectName: "Project G", rate: 120, ratePerSq: 18, percentage: 90 },
+  { projectName: "Project H", rate: 120, ratePerSq: 18, percentage: 90 },
 ];
 
 const PropertyPriceChart = () => {
@@ -22,7 +22,9 @@ const PropertyPriceChart = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://canvasjs.com/data/gallery/react/nifty-stock-price.json');
+      const response = await fetch(
+        "https://canvasjs.com/data/gallery/react/nifty-stock-price.json"
+      );
       const data = await response.json();
       console.log(data);
       const formattedDataPoints = data.map((point) => ({
@@ -80,31 +82,32 @@ const PropertyPriceChart = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', gap:'20px' }}>
-      <div style={{ flex: '1', width:'100%' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', margin: 'auto' }}>
-          <thead>
-            <tr>
-              <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Project Name</th>
-              <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Rate per sq</th>
-              <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Percentage</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((row, index) => (
-              <tr key={index}>
-                <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.projectName}</td>
-                <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.ratePerSq}</td>
-                <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.percentage}%</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div style={{ flex: '1', maxWidth: '100%', width: '100%', height: '400px', margin: 'auto' }}>
-        <CanvasJSChart options={options} />
-      </div>
-    </div>
+    // <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', gap:'20px' }}>
+    //   <div style={{ flex: '1', width:'100%' }}>
+    //     <table style={{ width: '100%', borderCollapse: 'collapse', margin: 'auto' }}>
+    //       <thead>
+    //         <tr>
+    //           <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Project Name</th>
+    //           <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Rate per sq</th>
+    //           <th style={{ padding: '8px', textAlign: 'center', backgroundColor: 'blue', color: 'white' }}>Percentage</th>
+    //         </tr>
+    //       </thead>
+    //       <tbody>
+    //         {data.map((row, index) => (
+    //           <tr key={index}>
+    //             <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.projectName}</td>
+    //             <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.ratePerSq}</td>
+    //             <td style={{ padding: '8px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{row.percentage}%</td>
+    //           </tr>
+    //         ))}
+    //       </tbody>
+    //     </table>
+    //   </div>
+    //   <div style={{ flex: '1', maxWidth: '100%', width: '100%', height: '400px', margin: 'auto' }}>
+    //     <CanvasJSChart options={options} />
+    //   </div>
+    // </div>
+    <></>
   );
 };
 
