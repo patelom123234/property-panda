@@ -70,9 +70,9 @@ import GridFull4Col from "./pages/listings/(grid-view)/grid-full-4-col";
 import SingleV7 from "./pages/property/(single-style)/single-v7";
 import ScrollTopBehaviour from "./components/common/ScrollTopBehaviour";
 import { createGlobalStyle } from "styled-components";
-import Disclaimer from "./pages/cmsPages/desclaimer";
+import Disclaimer from "./pages/cmsPages/Desclaimer";
 import TermsConditions from "./pages/cmsPages/TermsAndPrivacy";
-import OurService from "./pages/cmsPages/ourService";
+import OurService from "./pages/cmsPages/OurService";
 import PrivacyPolicy from "./pages/cmsPages/PrivacyPolicy";
 
 const Insight_index = lazy(() => import("./pages/InsightIndex/Insight_index"));
