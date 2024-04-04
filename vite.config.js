@@ -1,19 +1,23 @@
-import { defineConfig } from 'vite'
-import path from 'path'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react"; // Import the correct plugin for React
 
-// https://vitejs.dev/config/
+// Import your Webpack configuration if needed
+import webpackConfig from "./webpack.config.js";
+
 export default defineConfig({
   server: {
     mimeTypes: {
-      '.scss': 'text/x-scss',
+      ".scss": "text/x-scss",
     },
   },
-  plugins: [react()],
+  // Use Webpack configuration if needed
+  configureWebpack: webpackConfig,
+  plugins: [react()], // Ensure the correct import of the react plugin
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      // Construct the absolute path based on the current module's URL
+      "@": new URL("./src", import.meta.url).pathname,
     },
+    extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
   },
-  extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
-})
+});
