@@ -36,6 +36,13 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+window.onerror = function (message, source, lineno, colno, error) {
+  // Log the error
+  console.error("An error occurred:", error);
+  // Optionally, you can prevent the default error handling behavior by returning true
+  // return true;
+};
+
 function App() {
   useEffect(() => {
     Aos.init({
