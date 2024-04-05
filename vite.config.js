@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react"; // Import the correct plugin for React
-import commonjs from "@rollup/plugin-commonjs"; // Import the Rollup CommonJS plugin
+import react from "@vitejs/plugin-react";
+import commonjs from "@rollup/plugin-commonjs";
 
 export default defineConfig({
   server: {
@@ -9,13 +9,30 @@ export default defineConfig({
     },
   },
   plugins: [
-    react(), // Ensure the correct import of the react plugin
-    commonjs(), // Add the Rollup CommonJS plugin
+    react(),
+    commonjs({
+      transformMisc: {
+        globalThis: "window", // Fix for global 'this' errors
+      },
+    }),
   ],
   resolve: {
     alias: {
       "@": new URL("./src", import.meta.url).pathname,
     },
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+          // Add other vendor chunks if needed
+        },
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom"],
   },
 });
